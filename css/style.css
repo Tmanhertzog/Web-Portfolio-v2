@@ -274,6 +274,17 @@ header{
   margin-bottom: 12px;
 }
 
+.thumb_dim{
+  height: 140px;
+  border-radius: 16px;
+  border: 1px solid var(--faint);
+  background:
+    radial-gradient(340px 180px at 70% 20%, rgba(255,255,255,0.12), transparent 60%),
+    rgba(255,255,255,0.06);
+  margin-bottom: 12px;
+  filter: brightness(80%);
+}
+
 .project-card h3{
   margin: 8px 0 6px;
   letter-spacing: -0.02em;
