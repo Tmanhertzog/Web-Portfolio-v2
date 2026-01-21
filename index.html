@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tristan Hertzog | Data Scientist & Software Developer</title>
+    <link rel="stylesheet" href="css/vars.css">
     <link rel="stylesheet" href="css/style.css">
     <meta name="description" content="Portfolio of Tristan Hertzog — data science, software engineering, and innovative projects.">
     <meta name="keywords" content="Tristan Hertzog, Data Science, Software Development, Portfolio"> <!-- Headline -->
@@ -11,6 +12,7 @@
     <meta property="og:site_name" content="Tristan Hertzog"> 
     <!-- <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="shortcut icon" href="images/favicon.png"> -->
+    <script src="scripts/projects.js"></script>
     <script type="application/ld+json">{
         "@context": "https://schema.org",
         "@type": "WebSite",
@@ -19,6 +21,19 @@
     }</script>
 </head>
 <body>
+    <!-- Modals Section -->
+    <div id="emptyModal" class="modal" onclick="handleBackdropClick(event)">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-label="More Skills">
+        <div class="modal-header">
+        <p class="modal-title">More Skills</p>
+        <button class="modal-close" type="button" onclick="closeModal()" aria-label="Close modal">×</button>
+        </div>
+
+        <div class="modal-body">
+        <iframe src="skills_modal.html"></iframe>
+        </div>
+    </div>
+    </div>
     <!-- NAV -->
     <div id="start"></div>
     <header id="top">
@@ -229,12 +244,15 @@
                     </div>
                 </div>
                 <div class="skill-group">
-                    <h3>Frameworks</h3>
+                    <h3>Tools and Frameworks</h3>
                     <div class="chips">
                         <span>React</span>
                         <span>Node</span>
                         <span>Spring</span>
+                        <span>Git</span>
+                        <span>GitHub</span>
                         <span>Maven</span>
+                        <span>Gradle</span>
                     </div>
                 </div>
                 <div class="skill-group">
@@ -249,6 +267,7 @@
                         <span>BeautifulSoup4</span>
                         <span>Weights & Biases</span>
                     </div>
+                    <button type="button" onclick="openModal()" class="btn-link">More Skills</button>
                 </div>
             </div>
         </section>
