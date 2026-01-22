@@ -149,9 +149,10 @@ h1{
 }
 
 .chips span.hot{
-  background: rgba(84, 93, 190, 0.35);
+  background: var(--blue-2);
   color: rgba(255,255,255,0.90);
-  border-color: rgba(84, 93, 190, 0.55);
+  border-color: var(--blue);
+  /* border-color: rgba(84, 93, 190, 0.55); */
 }
 
 .bullets{
