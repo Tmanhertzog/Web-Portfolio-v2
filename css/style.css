@@ -1,18 +1,7 @@
 /* =========
    Base
 ========= */
-:root{
-  --bg: #0b0f17;
-  --panel: rgba(255,255,255,0.06);
-  --panel-2: rgba(255,255,255,0.08);
-  --text: rgba(255,255,255,0.92);
-  --blue:  rgb(84, 93, 190);
-  --muted: rgba(255,255,255,0.70);
-  --faint: rgba(255,255,255,0.12);
-  --shadow: 0 12px 40px rgba(0,0,0,0.35);
-  --radius: 18px;
-  --max: 1120px;
-}
+
 
 *{ box-sizing: border-box; }
 html{ scroll-behavior: smooth; }
@@ -449,6 +438,112 @@ header{
 #contact .hero-actions {
   justify-content: center;
 }
+
+#more_info {
+  margin-top: 1em;
+}
+
+.btn-link{
+  background: var(--panel);
+  border-radius: 10px;
+  border: 1px solid var(--faint);
+  padding: 12px;
+  color: var(--blue);
+  font: inherit;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+}
+.btn-link:hover{ opacity: 0.85; }
+
+
+/* =========
+   Modals (theme-matched)
+========= */
+
+.modal{
+  z-index: 200;                 /* above sticky header */
+  display: none;
+  position: fixed;
+  inset: 0;                     /* top/right/bottom/left:0 */
+  background: rgba(0,0,0,0.62);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  justify-content: center;
+  align-items: center;
+  padding: 18px;                /* breathing room on small screens */
+}
+
+.modal.is-open{
+  display: flex;
+}
+
+.modal-content{
+  width: min(920px, 96vw);
+  height: min(640px, 86vh);
+  background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 18px;
+  box-shadow: 0 18px 60px rgba(0,0,0,0.55);
+  overflow: hidden;             /* keep iframe + header corners clean */
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+  background: rgba(11,15,23,0.55);
+}
+
+.modal-title{
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: -0.01em;
+  color: rgba(255,255,255,0.90);
+}
+
+.modal-close{
+  appearance: none;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.90);
+  border-radius: 12px;
+  width: 36px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 140ms ease, background 140ms ease;
+}
+
+.modal-close:hover{
+  transform: translateY(-1px);
+  background: rgba(255,255,255,0.10);
+}
+
+.modal-body{
+  flex: 1;
+}
+
+.modal-body iframe{
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: transparent;
+}
+
+@media (max-width: 620px){
+  .modal-content{
+    height: min(620px, 88vh);
+  }
+}
+
 
 /* =========
    Footer
